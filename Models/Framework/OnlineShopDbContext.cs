@@ -8,7 +8,7 @@ namespace Models.Framework
     public partial class OnlineShopDbContext : DbContext
     {
         public OnlineShopDbContext()
-            : base("name=OnlineShopDbContext")
+            : base("OnlineShopDbContext")
         {
         }
 

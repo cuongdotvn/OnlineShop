@@ -19,7 +19,7 @@ namespace OnlineShop.Areas.Admin.Models
             set;
             get;
         }
-        public string RememberMe
+        public bool RememberMe
         {
             set;
             get;
