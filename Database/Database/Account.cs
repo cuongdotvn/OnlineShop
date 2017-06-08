@@ -1,4 +1,4 @@
-namespace Models.Framework
+namespace Database.Database
 {
     using System;
     using System.Collections.Generic;

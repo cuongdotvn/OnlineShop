@@ -1,19 +1,18 @@
-﻿using Models.Framework;
+﻿using Database.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace Models
+namespace Database
 {
-    public class AccountModel
+    public class DatabaseModel
     {
-        private OnlineShopDbContext context = null;
-        public AccountModel()
+        private OnlineShopDatabaseModel context = null;
+        public DatabaseModel()
         {
-            context = new OnlineShopDbContext();
-
+            context = new OnlineShopDatabaseModel();
         }
         public bool Login(string userName, string password)
         {
@@ -24,9 +23,8 @@ namespace Models
 
             };
             var res = context.Database.SqlQuery<bool>("Sp_Account_Login @UserName,@Password", sqlParams).SingleOrDefault();
-            return res;    
-        }
-
+            return res;
+        } 
     }
     
 }
