@@ -1,14 +1,14 @@
-namespace Database.Database
+namespace Models.Framework
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
 
-    public partial class OnlineShopDatabaseModel : DbContext
+    public partial class OnlineShopDbContext : DbContext
     {
-        public OnlineShopDatabaseModel()
-            : base("name=OnlineShopDatabaseModel")
+        public OnlineShopDbContext()
+            : base("name=OnlineShopDbContext")
         {
         }
 

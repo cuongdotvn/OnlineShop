@@ -328,9 +328,9 @@
     <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Database\Database.csproj">
-      <Project>{86d03370-e3e3-4f3a-97a0-79165b5cacc4}</Project>
-      <Name>Database</Name>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{6b6440e1-d603-4e2d-b976-0da407252b14}</Project>
+      <Name>Models</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

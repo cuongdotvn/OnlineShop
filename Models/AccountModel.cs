@@ -1,30 +1,28 @@
-﻿using Database.Database;
+﻿using Models.Framework;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 
-namespace Database
+namespace Models
 {
-    public class DatabaseModel
+    public class AccountModel
     {
-        private OnlineShopDatabaseModel context = null;
-        public DatabaseModel()
+        private OnlineShopDbContext context = null;
+        public AccountModel()
         {
-            context = new OnlineShopDatabaseModel();
+            context = new OnlineShopDbContext();
         }
         public bool Login(string userName, string password)
         {
             object[] sqlParams =
             {
-                new SqlParameter("@UserName", userName),
-                new SqlParameter("@Password", userName),
-
-            };
+                new SqlParameter("UserName", userName),
+                new SqlParameter("Password", password),
+        };
             var res = context.Database.SqlQuery<bool>("Sp_Account_Login @UserName,@Password", sqlParams).SingleOrDefault();
             return res;
-        } 
+        }
     }
-    
 }

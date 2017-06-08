@@ -1,4 +1,4 @@
-﻿using Database;
+﻿using Models;
 using OnlineShop.Areas.Admin.Code;
 using OnlineShop.Areas.Admin.Models;
 using System;
@@ -23,7 +23,7 @@ namespace OnlineShop.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Index(LoginModel model)
         {
-            var result = new DatabaseModel().Login(model.UserName, model.Password);
+            var result = new AccountModel().Login(model.UserName, model.Password);
             if (result && ModelState.IsValid)
             {
                 SessionHelper.SetSession(new UserSession() { UserName = model.UserName });
