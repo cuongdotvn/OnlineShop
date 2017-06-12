@@ -9,19 +9,12 @@ namespace OnlineShop.Areas.Admin.Code
 {
     public class CustomMembershipProvider : MembershipProvider
     {
-
-
         private MembershipPasswordFormat pPasswordFormat;
+
         public override string ApplicationName
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get { throw new NotImplementedException(); }
+            set { throw new NotImplementedException(); }
         }
 
         public override bool ChangePassword(string username, string oldPassword, string newPassword)
@@ -29,12 +22,15 @@ namespace OnlineShop.Areas.Admin.Code
             throw new NotImplementedException();
         }
 
-        public override bool ChangePasswordQuestionAndAnswer(string username, string password, string newPasswordQuestion, string newPasswordAnswer)
+        public override bool ChangePasswordQuestionAndAnswer(string username, string password,
+            string newPasswordQuestion, string newPasswordAnswer)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUser CreateUser(string username, string password, string email, string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey, out MembershipCreateStatus status)
+        public override MembershipUser CreateUser(string username, string password, string email,
+            string passwordQuestion, string passwordAnswer, bool isApproved, object providerUserKey,
+            out MembershipCreateStatus status)
         {
             throw new NotImplementedException();
         }
@@ -54,12 +50,14 @@ namespace OnlineShop.Areas.Admin.Code
             get { throw new NotImplementedException(); }
         }
 
-        public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public override MembershipUserCollection FindUsersByEmail(string emailToMatch, int pageIndex, int pageSize,
+            out int totalRecords)
         {
             throw new NotImplementedException();
         }
 
-        public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize, out int totalRecords)
+        public override MembershipUserCollection FindUsersByName(string usernameToMatch, int pageIndex, int pageSize,
+            out int totalRecords)
         {
             throw new NotImplementedException();
         }

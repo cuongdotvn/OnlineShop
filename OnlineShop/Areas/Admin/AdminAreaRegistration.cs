@@ -6,10 +6,7 @@ namespace OnlineShop.Areas.Admin
     {
         public override string AreaName
         {
-            get
-            {
-                return "Admin";
-            }
+            get { return "Admin"; }
         }
 
         public override void RegisterArea(AreaRegistrationContext context)
@@ -17,8 +14,8 @@ namespace OnlineShop.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index", Controller = "Home", id = UrlParameter.Optional },
-                new[] { "OnlineShop.Areas.Admin.Controllers" }
+                new {action = "Index", Controller = "Home", id = UrlParameter.Optional},
+                new[] {"OnlineShop.Areas.Admin.Controllers"}
             );
         }
     }

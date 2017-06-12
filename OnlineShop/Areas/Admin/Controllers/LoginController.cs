@@ -15,11 +15,11 @@ namespace OnlineShop.Areas.Admin.Controllers
         //
         // GET: /Admin/Login/
         [HttpGet]
-
         public ActionResult Index()
         {
             return View();
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Index(LoginModel model)
@@ -48,7 +48,5 @@ namespace OnlineShop.Areas.Admin.Controllers
             }
             return View(model);
         }
-
-
     }
 }

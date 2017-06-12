@@ -15,6 +15,5 @@ namespace OnlineShop.Controllers
         {
             return View();
         }
-
     }
 }

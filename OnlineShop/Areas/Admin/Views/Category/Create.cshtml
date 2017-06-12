@@ -16,54 +16,54 @@
                     <div class="col-lg-6">
 
                         @using (Html.BeginForm())
-            {
+                        {
                             @Html.AntiForgeryToken()
                             @Html.ValidationSummary(true)
 
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.Name)</label>
-                                @Html.TextBoxFor(model => model.Name, new { @class ="form-control"})
-                                @Html.ValidationMessageFor(model => model.Name, null, new { @class = "alert-danger"})
+                                @Html.TextBoxFor(model => model.Name, new {@class = "form-control"})
+                                @Html.ValidationMessageFor(model => model.Name, null, new {@class = "alert-danger"})
                             </div>
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.Alias)</label>
-                                @Html.TextBoxFor(model => model.Alias, new { @class = "form-control"})
+                                @Html.TextBoxFor(model => model.Alias, new {@class = "form-control"})
                                 @Html.ValidationMessageFor(model => model.Alias)
                             </div>
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.ParentID)</label>
-                                @Html.TextBoxFor(model => model.ParentID, new { @class ="form-control"})
+                                @Html.TextBoxFor(model => model.ParentID, new {@class = "form-control"})
                                 @Html.ValidationMessageFor(model => model.ParentID)
                             </div>
                             <div class="form-group">
                                 <label>@Html.LabelFor(model => model.CreatedDate)</label>
-                                @Html.TextBoxFor(model => model.CreatedDate, new { @class ="form-control"})
+                                @Html.TextBoxFor(model => model.CreatedDate, new {@class = "form-control"})
                                 @Html.ValidationMessageFor(model => model.CreatedDate)
                                 <div class="form-group">
                                     <label>@Html.LabelFor(model => model.Order)</label>
-                                    @Html.TextBoxFor(model => model.Order, new { @class ="form-control"})
+                                    @Html.TextBoxFor(model => model.Order, new {@class = "form-control"})
                                     @Html.ValidationMessageFor(model => model.Order)
                                 </div>
                                 <div class="form-group">
                                     <label>@Html.LabelFor(model => model.Status)</label>
                                     @Html.DropDownListFor(model => model.Status, new List<SelectListItem>()
-                                {
-                                    new SelectListItem(){Selected = true, Text = "Kích hoạt", Value = "true"},
-                                    new SelectListItem(){Selected = false, Text = "Khóa", Value = "false"}
-                                }, new { @class ="form-control"})
+                                    {
+                                        new SelectListItem() {Selected = true, Text = "Kích hoạt", Value = "true"},
+                                        new SelectListItem() {Selected = false, Text = "Khóa", Value = "false"}
+                                    }, new {@class = "form-control"})
                                     @Html.ValidationMessageFor(model => model.Status)
                                 </div>
                                 <p>
-                                    <input type="submit" value="Tạo" />
+                                    <input type="submit" value="Tạo"/>
                                 </p>
                             </div>
                         }
-                    <!-- /.panel -->
-                        </div>
-                <!-- /.col-lg-12 -->
-                        </div>
-            <!-- /.row -->
-                        </div>
+                        <!-- /.panel -->
                     </div>
+                    <!-- /.col-lg-12 -->
                 </div>
+                <!-- /.row -->
             </div>
+        </div>
+    </div>
+</div>

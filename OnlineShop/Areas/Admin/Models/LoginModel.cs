@@ -9,21 +9,9 @@ namespace OnlineShop.Areas.Admin.Models
     public class LoginModel
     {
         [Required]
-        public string UserName
-        {
-            set;
-            get;
-        }
-        public string Password
-        {
-            set;
-            get;
-        }
-        public bool RememberMe
-        {
-            set;
-            get;
-        }
+        public string UserName { set; get; }
 
+        public string Password { set; get; }
+        public bool RememberMe { set; get; }
     }
 }
